@@ -1,0 +1,62 @@
+._wrapped {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+._btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  height: 52px;
+  padding-left: 45px;
+  padding-right: 45px;
+  color: $color-dark-3xl;
+  font-family: Georgia;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  border: 0;
+  letter-spacing: 0.06em;
+  transition: background-color 0.3s ease-in-out;
+}
+._btn-dark {
+  background-color: $color-primary;
+  &:hover {
+    background-color: $color-primary-light;
+  }
+}
+._btn-light {
+  background-color: transparent;
+  border: 2px solid $color-primary;
+  &:hover {
+    background-color: $color-primary-light;
+  }
+}
+._section-title {
+  font-family: Georgia;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 45px;
+  letter-spacing: 0.06em;
+}
+._section-title-common {
+  font-family: Georgia;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 45px;
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
+  @media (max-width: $mobile-breakpoint) {
+    font-family: Georgia;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+}

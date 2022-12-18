@@ -1,0 +1,127 @@
+#start {
+  margin-top: -180px;
+  padding-top: 180px;
+  background-color: #211F20;
+  background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%),
+  linear-gradient(0deg, #211F20, #211F20);
+  background: url('../../assets/images/noise_transparent@2x.png'), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+  @media (max-width: $tablet-breakpoint) {
+    margin-top: -150px;
+    padding-top: 150px;
+  }
+}
+.start__content {
+  display: flex;
+  justify-content: space-between;
+  color: $color-light-xl;
+  @media (max-width: $tablet-breakpoint) {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px;
+  }
+  @media (max-width: $mobile-breakpoint) {
+    gap: 105px;
+  }
+}
+.start__intro {
+  margin-top: 163px;
+  display: flex;
+  flex-direction: column;
+  max-width: 460px;
+  gap: 42px;
+  @media (max-width: $tablet-breakpoint) {
+    margin-top: 0px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+.intro {
+}
+.intro__title {
+  max-width: 320px;
+  font-family: Georgia;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 57px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: $color-light-xl;
+  @media (max-width: $mobile-breakpoint) {
+    font-family: Georgia;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+}
+.intro__text {
+  font-family: Arial;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  // margin-bottom: 42px;
+  color: $color-dark-s;
+  @media (max-width: $mobile-breakpoint) {
+    width: 300px;
+    text-align: center;
+  }
+  @media (max-width: $mobile-breakpoint) {
+    // margin-bottom: 42px;
+  }
+}
+.intro__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: 0;
+  width: 207px;
+  height: 52px;
+  color: $color-dark-3xl;
+  background-color: $color-primary;
+  font-family: Georgia;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  transition: background-color 0.3s ease-in-out;
+  &:hover {
+    background-color: $color-primary-light;
+  }
+  @media (max-width: $tablet-breakpoint) {
+    align-self: center;
+  }
+}
+.start__image-wrapper {
+  @media (max-width: $tablet-breakpoint) {
+    width: 100%;
+    display: flex;
+    &::before {
+      content: "";
+      flex: 169 0 auto;
+    }
+    &::after {
+      content: "";
+      flex: 30 0 auto;
+    }
+  }
+}
+.start__image {
+  @media (max-width: $tablet-breakpoint) {
+    flex: 569 569px auto;
+    width: 569px;
+  }
+  @media (max-width: $mobile-breakpoint) {
+    flex: 569 260px auto;
+    width: 260px;
+  }
+}

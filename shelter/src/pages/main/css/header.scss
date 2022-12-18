@@ -1,0 +1,220 @@
+#header {
+  position: relative;
+}
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 180px;
+  padding: 60px 0 60px 0;
+  @media (max-width: $tablet-breakpoint) {
+    padding: 30px 30px 60px 30px;
+    height: 150px;
+  }
+  @media (max-width: $mobile-breakpoint) {
+    padding-left: 10px;
+    padding-right: 53px;
+  }
+}
+.header__logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  &._disabled {
+    cursor: auto;
+  }
+  @media (max-width: $mobile-breakpoint) {
+    &_hidden {
+      display: none;
+    }
+  }
+}
+.header__logo-title {
+  font-family: Georgia;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35.2px;
+  letter-spacing: 0.06em;
+  color: $color-primary;
+}
+.header__logo-subtitle {
+  font-family: Arial;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  color: $color-light-xl;
+}
+#header__navigation {
+  @media (max-width: $mobile-breakpoint) {
+    display: none;
+  }
+}
+.header__navigation-list {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  margin-bottom: 5px;
+}
+.header__navigation-item {
+}
+.header__navigation-link {
+  position: relative;
+  font-family: Arial;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: $color-dark-s;
+  transition: color 0.3s ease-out;
+  &._disabled {
+    cursor: auto;
+    &:hover {
+      color: $color-dark-s;
+    }
+    &::after {
+      content: "";
+      display: none;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+  }
+  &:hover {
+    color: $color-light-s;
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: $color-primary;
+    transition: width 0.3s ease-out;
+  }
+  &:hover::after {
+    width: 100%;
+  }
+}
+.header__navigation-link_active {
+  color: $color-light-s;
+  &::after {
+    width: 100%;
+  }
+}
+.header__burger {
+  display: none;
+  position: absolute;
+  top: 45px;
+  right: 53px;
+  z-index: 5;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  @media (max-width: $mobile-breakpoint) {
+    display: flex;
+  }
+}
+.header__mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 0;
+  width: 0;
+  justify-content: end;
+  align-items: center;
+  @media (min-width: calc($mobile-breakpoint + 1px)) {
+    display: none;
+  }
+}
+.header__logo-wrapper {
+  display: flex;
+}
+.menu {
+}
+._menu-open {
+  .menu__background {
+    display: flex;
+  }
+  .menu__content {
+    right: 0;
+  }
+  .header__burger {
+    position: fixed;
+    transform: rotate(-90deg);
+  }
+  .header__logo-wrapper {
+    @media (max-width: $mobile-breakpoint) {
+      display: none;
+    }
+  }
+}
+.menu__background {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(41, 41, 41, 0.6);
+  &:hover {
+    cursor: pointer;
+  }
+}
+.menu__logo-wrapper {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+  padding-top: 30px;
+}
+.menu__content {
+  position: fixed;
+  display: flex;
+  top: 0;
+  right: -100%;
+  height: 100%;
+  width: 320px;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-dark-3xl;
+  transition: 0.5s;
+  &._open {
+    right: 0;
+    transition: 0.5s;
+  }
+}
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.menu__item {
+  font-family: Arial;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  & > a {
+    font-family: Arial;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 51px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+}
+.header__navigation-link {
+}
+.header__navigation-link_active {
+}
